@@ -8,11 +8,7 @@ def solve(min, max):
 	>>> solve(0, 1000)
 	233168
 	"""
-	sum = 0
-	for i in range(min, max):
-		if i % 3 == 0 or i % 5 == 0:
-			sum = sum + i
-	return sum
+	return sum([i for i in range(min, max) if i % 3 == 0 or i % 5 == 0])
  
 if __name__ == "__main__":
 	print "Answer:", solve(0, 1000)
